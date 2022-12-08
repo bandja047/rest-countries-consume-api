@@ -46,7 +46,7 @@ const CountriesDetails = () => {
                         <div className='detailsLeft'>
                             <h1>{item.name.common}</h1>
                             <p><span>Native Name:</span> {getNativeNames(item.name.nativeName)} </p>
-                            <p><span>Population: </span>{item.population}</p>
+                            <p><span>Population: </span>{String(item.population).replace(/(.)(?=(\d{3})+$)/g,'$1,')}</p>
                             <p><span>Region:</span> {item.region}</p>
                             <p><span>Sub Region:</span> {item.subregion}</p>
                             <p><span>Capital:</span> {item.capital}</p>

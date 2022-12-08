@@ -11,7 +11,7 @@ const CountriesItem = (props) => {
            
                         <img src={png} alt='' width="240" height="100" />
                         <h1 >{common}</h1>
-                        <p className='not-margin-top'>population:{population}</p>
+                        <p className='not-margin-top'>population:{String(population).replace(/(.)(?=(\d{3})+$)/g,'$1,')}</p>
                         <p>Region:{region}</p>
                         <p>Capital:{capital}</p>
 

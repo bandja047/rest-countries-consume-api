@@ -46,7 +46,7 @@
       "last 1 safari version"
     ]
   },
-  "home":"https://bandja047.github.io/rest-countries-consume-api/",
+  "homepage":"https://bandja047.github.io/rest-countries-consume-api/",
   "devDependencies": {
     "gh-pages": "^4.0.0"
   }

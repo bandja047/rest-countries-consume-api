@@ -5,7 +5,7 @@ import './buttonBack.css';
 const ButtonBack = () => {
     return (
         <div className='btn-back'>
-            <Link className='link link-back' to='/'>
+            <Link className='link link-back' to='/rest-countries-consume-api'>
                 <KeyboardBackspaceIcon /><span>Back</span>
             </Link>
         </div>

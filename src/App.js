@@ -11,8 +11,8 @@ function App() {
 
     <ThemeContextV2Provider>
        <Routes>
-      <Route path="/" element={<Countries/>} />
-      <Route path="/countries/details/:name" element={<CountriesDetails/>} />
+      <Route path="/rest-countries-consume-api" element={<Countries/>} />
+      <Route path="rest-countries-consume-api/countries/details/:name" element={<CountriesDetails/>} />
       
     </Routes>
     </ThemeContextV2Provider>

@@ -17,8 +17,8 @@ const CountriesDetails = () => {
     const [country,alpha,setCountries] = useCountryName([])
 
     function redirect(param) {
-        
-        navigate(`/countries/details/${param}`);
+
+        navigate(`/rest-countries-consume-api/countries/details/${param}`);
 
        setCountries(param)
 

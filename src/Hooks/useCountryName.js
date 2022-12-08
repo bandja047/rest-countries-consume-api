@@ -19,7 +19,7 @@ export function useCountryName(){
                 console.log(response);
                 response.map((item) => {
 
-                    console.log("object");
+                   
                     setAlpha(item.borders)
                 });
 

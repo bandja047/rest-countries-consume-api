@@ -13,6 +13,8 @@
 .countriesDetails img{
     height: 300px;
     width: 400px;
+    border-radius: 3px;
+    box-shadow: -4px -4px 16px 16px var(--Dark-Blue);
 }
 
 .countriesDetails h1 {

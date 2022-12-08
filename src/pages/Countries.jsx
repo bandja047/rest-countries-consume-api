@@ -39,7 +39,7 @@ const Countries = () => {
 
     function handleOptionChange(e) {
 
-        alert(e)
+     
         console.log(e);
 
         axios.get(`https://restcountries.com/v3.1/region/${e}`)

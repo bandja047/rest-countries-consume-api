@@ -41,7 +41,7 @@ const Filter = (props) => {
 
             </form>
             <select onChange={e=>handleChange(e)} >
-                <option>All</option>
+                <option disabled>Filter By Region</option>
                 <option>Africa</option>
                 <option>America</option>
                 <option>Asia</option>

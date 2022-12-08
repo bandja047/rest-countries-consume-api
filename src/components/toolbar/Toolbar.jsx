@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 
-import ThemeContextV2 from '../../context/ThemeContextV2';
+import ThemeContext from '../../context/ThemeContext';
 import './toolbar.css';
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 const Toolbar = () => {
 
-    const { theme, toggleTheme}= useContext(ThemeContextV2);
+    const { theme, toggleTheme}= useContext(ThemeContext);
 
     function handleSwitchTheme(){
         

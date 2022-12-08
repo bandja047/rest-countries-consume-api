@@ -1,34 +1,31 @@
 import React, { createContext, useState } from 'react';
 
-const themes = {
-    light: {
-        name: "light",
-        background: "white",
-        color: "black"
-    },
-    dark: {
-        name:"dark",
-        background: "black",
-        color: "white"
-    }
-}
+
+
+
 const ThemeContext = createContext({
-    name: "light",
-    mode: themes.light,
-    updateTheme: () => { }
+    theme:'dark'
 })
 
 export const ThemeContextProvider = (props) => {
-    const [theme, setTheme] = useState(themes.light)
 
-   
-      
-      const   toggleTheme= (value) => {
-          
-            value === "light" ? setTheme(themes.dark) : setTheme(themes.light);
-            console.log(value)
+    const [theme, setTheme] = useState('dark')
+
+    const toggleTheme = (mode) => {
+
+        console.log('mode: ' + mode)
+        const body = document.body;
+        if (mode === 'light') {
+            setTheme('dark');
+           
+            body.classList.add('dark');
         }
-    
+        else { 
+            setTheme('light');  
+           
+            body.classList.remove('dark')}
+      
+    }
 
     return (
         <ThemeContext.Provider value={{theme,toggleTheme}}>
@@ -37,4 +34,4 @@ export const ThemeContextProvider = (props) => {
     );
 };
 
-export default ThemeContext; 
+export default ThemeContext;

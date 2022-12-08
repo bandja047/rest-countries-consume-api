@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './countriesDetails.css'
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 
-import axios from 'axios';
 import Toolbar from '../components/toolbar/Toolbar';
 import ButtonBack from '../components/button/ButtonBack';
-import { useAlpha } from '../Hooks/useAlpha';
+
 import { useCountryName } from '../Hooks/useCountryName';
 
 const CountriesDetails = () => {
@@ -14,21 +13,21 @@ const CountriesDetails = () => {
 
     const navigate = useNavigate();
 
-    const [country,alpha,setCountries] = useCountryName([])
+    const [country, alpha, setCountries] = useCountryName([])
 
     function redirect(param) {
 
         navigate(`/rest-countries-consume-api/countries/details/${param}`);
 
-       setCountries(param)
+        setCountries(param)
 
     }
 
     useEffect(() => {
 
         setCountries(name)
-        
-    }, [])
+
+    },[])
 
     console.log(name);
 
@@ -41,12 +40,12 @@ const CountriesDetails = () => {
 
                 {country.map(item => (
                     <div className="countriesDetails">
-                        <div className='flag-datails'> <img src={item.flags.png} width="240p" height="100" /></div>
+                        <div className='flag-datails'> <img src={item.flags.png} alt="" width="240p" height="100" /></div>
 
                         <div className='detailsLeft'>
                             <h1>{item.name.common}</h1>
                             <p><span>Native Name:</span> {getNativeNames(item.name.nativeName)} </p>
-                            <p><span>Population: </span>{String(item.population).replace(/(.)(?=(\d{3})+$)/g,'$1,')}</p>
+                            <p><span>Population: </span>{String(item.population).replace(/(.)(?=(\d{3})+$)/g, '$1,')}</p>
                             <p><span>Region:</span> {item.region}</p>
                             <p><span>Sub Region:</span> {item.subregion}</p>
                             <p><span>Capital:</span> {item.capital}</p>

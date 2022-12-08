@@ -1,16 +1,16 @@
-.countriesDetails{
+.countriesDetails {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 72px;
+    padding: 0 72px;
     padding-bottom: 72px;
 
-   
 
-    
+
+
 }
 
-.countriesDetails img{
+.countriesDetails img {
     height: 300px;
     width: 400px;
     border-radius: 3px;
@@ -18,21 +18,22 @@
 }
 
 .countriesDetails h1 {
-    margin-bottom : 25px;
-}
-.countriesDetails p{
-    padding: 5px;
-    
+    margin-bottom: 25px;
 }
 
-.countriesDetails span{
+.countriesDetails p {
+    padding: 5px;
+
+}
+
+.countriesDetails span {
     margin-right: 5px;
 }
 
-.btn-border{
+.btn-border {
     margin: 25px 3px 25px 3px;
     border-radius: 3px;
     padding: 8px 12px 8px 12px;
     border: none;
-    
+
 }

@@ -1,58 +1,30 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect} from 'react';
+
 
 
 import Toolbar from '../components/toolbar/Toolbar';
 import Filter from '../components/filter/Filter';
-import Card from '../components/card/Card';
-import CountriesItem from '../components/Countries/CountriesItem/CountriesItem';
+
 import CountriesAll from '../components/Countries/CountriesAll/CountriesAll';
+import { useCountriesFilter } from '../Hooks/useCountriesFilter';
 
 const Countries = () => {
 
 
-
-
-    const [countries, setCountries] = useState([]);
-
-    const [search, setSearch] = useState([])
-
-
-
-
+    const [countries, search, setSearch, setCountries, setCountriesByRegion] = useCountriesFilter([])
 
     useEffect(() => {
-        axios.get("https://restcountries.com/v3.1/all").then((result) => {
-            const data = result.data;
-            const countries = [...data]
-            // console.log(countries);
-            // console.log(object);
-            console.log("render");
-            setSearch(countries)
-            setCountries(countries)
-        }).catch(err => {
-            console.log(err);
-        })
-    }, [])
+        setCountries();
+    },[])
 
 
     function handleOptionChange(e) {
 
-     
+
         console.log(e);
+        setCountriesByRegion(e);
 
-        axios.get(`https://restcountries.com/v3.1/region/${e}`)
-            .then((result) => {
-                const data = result.data;
-                const response = [...data]
 
-                setSearch(response);
-
-            })
-            .catch(err => {
-                console.log(err);
-            })
     }
 
     function handleSubmit(e) {

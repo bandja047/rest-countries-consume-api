@@ -1,13 +1,61 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+:root{
+--Dark-Blue : hsl(209, 23%, 22%);
+--Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
+--Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
+--Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
+--Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 90%);
+--White-Dark-Mode-Text : hsl(0, 0%, 100%);
+
+--Light-Blue-Body : hsl(0, 0%, 75%);
+--Dark-Blue-Body : hsl(209, 35%, 14%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,body{
+  background-color: var(--Dark-Blue-Body) ;
+  height: 100%;
+ 
+}
+
+
+#root{
+
+  width: 75%;
+  margin: auto;
+
+ 
+  background-color: var(--Very-Light-Gray-Light-Mode-Background);
+}
+
+#root .link{
+  text-decoration: none;
+}
+
+
+.link{
+  background-color: var(--Very-Light-Gray-Light-Mode-Background);
+  color:var(--Very-Dark-Blue-Light-Mode-Text);
+}
+
+
+.dark #root,.dark .link{
+ background-color: var(--Very-Dark-Blue-Dark-Mode-Background);
+ color:var(--White-Dark-Mode-Text);
+
+ 
+}
+
+
+
+button {
+  background-color: var(--White-Dark-Mode-Text);
+  color: var(--Very-Dark-Blue-Light-Mode-Text);
+}
+.dark button{
+  background-color: var(--Dark-Blue);
+  color: var(--White-Dark-Mode-Text);
 }

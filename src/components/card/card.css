@@ -1,0 +1,18 @@
+.card{
+
+    border-radius:4px;
+    width: 225px;
+
+    margin-right: 30px;
+    
+
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 16px -8px var(--White-Dark-Mode-Text);
+    background-color:var(--White-Dark-Mode-Text);;
+}
+
+.dark .card{
+   
+    box-shadow: 0px -3px 16px -8px var(--Dark-Blue);
+    background-color:  var(--Dark-Blue);;
+}

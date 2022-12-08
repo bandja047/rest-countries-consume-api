@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import CountriesDetails from './pages/CountriesDetails';
+
+import { ThemeContextV2Provider } from './context/ThemeContextV2';
+import Countries from './pages/Countries';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <ThemeContextV2Provider>
+       <Routes>
+      <Route path="/" element={<Countries/>} />
+      <Route path="/countries/details/:name" element={<CountriesDetails/>} />
+      
+    </Routes>
+    </ThemeContextV2Provider>
+   
   );
 }
 

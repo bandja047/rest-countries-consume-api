@@ -1,0 +1,22 @@
+.card img{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.card{
+    padding-bottom: 20px;
+}
+
+
+
+p, h1{
+    margin: 0 8px 0 8px;
+}
+.not-margin-top{
+    margin-top: 10px;
+}
+p:not(.not-margin-top){
+    margin-top:5px;
+    
+}
